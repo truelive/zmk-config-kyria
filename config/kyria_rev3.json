@@ -1,4 +1,6 @@
 {
+  "id": "kyria_rev3",
+  "name": "kyria_rev3",
   "layouts": {
     "default": {
       "layout": [
@@ -57,5 +59,6 @@
         { "label":  "GUI", "row": 3, "col": 13, "x": 13.5, "y":   3.5 }
       ]
     }
-  }
+  },
+  "sensors": []
 }
