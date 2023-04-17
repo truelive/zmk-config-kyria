@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/outputs.h>
 
 &led_strip {
     chain-length = <31>;// Uncomment if using both per-key and underglow LEDs
@@ -38,10 +37,10 @@
 
         numbers_edit_nav {
             bindings = <
-&trans  &out 0  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
+   &trans                &mt F1 0            &mt F2 0           &mt F3 0              &mt F4 0       &mt F5 0                                  &mt F6 0            &mt F7 0            &mt F8 0            &mt F9 0                    &mt F10 0  &trans
+&kp LG(X)  &mt LEFT_CONTROL LG(C)  &mt LEFT_ALT LG(V)  &mt LEFT_GUI LEFT  &mt LEFT_SHIFT RIGHT  &kp LA(LG(I))                                    &trans  &mt RIGHT_SHIFT UP  &mt RIGHT_GUI DOWN  &mt LEFT_ALT RG(Z)  &mt RIGHT_CONTROL RS(RG(Z))  &trans
+   &trans                  &trans              &trans             &trans                &trans         &trans  &trans  &trans  &trans  &trans    &trans              &trans              &trans              &trans                       &trans  &trans
+                                               &trans                                   &trans         &trans  &trans  &trans   &mo 3  &trans    &trans              &trans                                  &trans
             >;
         };
 
