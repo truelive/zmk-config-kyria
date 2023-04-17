@@ -16,7 +16,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
             // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
@@ -31,6 +31,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW &inc_dec_kp UP_ARROW DOWN_ARROW>;
+            label = "Base Layer";
         };
 
         layer_1 {
