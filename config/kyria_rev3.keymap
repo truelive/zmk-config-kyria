@@ -30,7 +30,7 @@
                                     &kp GRAVE                  &kp LEFT_PARENTHESIS  &kp DEL  &kp BACKSPACE              &sl 1              &sl 2  &kp SPACE  &kp ENTER  &kp RIGHT_PARENTHESIS                        &kp MINUS
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW &inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         layer_1 {
