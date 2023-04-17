@@ -14,6 +14,42 @@
 };
 
 / {
+    behaviors {
+        mt_tap_pref: mt_tap_pref {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_TAP_PREF";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <130>;
+            flavor = "tap-preferred";
+        };
+        l_paren_brk: l_paren_brk {
+            compatible = "zmk,behavior-tap-dance";
+            label = "L_PAREN_BRK";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings =
+                <&kp KP_LEFT_PARENTHESIS>,
+                <&kp LEFT_BRACKET>,
+                <&kp LEFT_BRACE>;
+        };
+        r_paren_brk: r_paren_brk {
+            compatible = "zmk,behavior-tap-dance";
+            label = "R_PAREN_BRK";
+            #binding-cells = <0>;
+            bindings =
+                <&kp KP_RIGHT_PARENTHESIS>,
+                <&kp RIGHT_BRACKET>,
+                <&kp RIGHT_BRACE>;
+
+            tapping-term-ms = <180>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -25,10 +61,10 @@
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 
             bindings = <
-&kp EQUAL               &kp Q           &kp W           &kp F                 &kp P    &kp G                                              &kp J                  &kp L            &kp U           &kp Y             &kp SEMI    &kp BSLH
-  &kp TAB  &mt LEFT_CONTROL A  &mt LEFT_ALT R  &mt LEFT_GUI S      &mt LEFT_SHIFT T    &kp D                                              &kp H      &mt RIGHT_SHIFT N  &mt RIGHT_GUI E  &mt LEFT_ALT I  &mt RIGHT_CONTROL O     &kp SQT
-  &kp ESC               &kp Z           &kp X           &kp C                 &kp V    &kp B      &sk LSHFT  &none  &none  &sk LSHFT      &kp K                  &kp M        &kp COMMA         &kp DOT             &kp FSLH  &caps_word
-                                    &kp GRAVE                  &kp LEFT_PARENTHESIS  &kp DEL  &kp BACKSPACE  &sl 1  &sl 2  &kp SPACE  &kp ENTER  &kp RIGHT_PARENTHESIS                        &kp MINUS
+&kp EQUAL                        &kp Q                    &kp W                    &kp F                      &kp P         &kp G                                                 &kp J                       &kp L                     &kp U                    &kp Y                      &kp SEMI    &kp BSLH
+  &kp TAB  &mt_tap_pref LEFT_CONTROL A  &mt_tap_pref LEFT_ALT R  &mt_tap_pref LEFT_GUI S  &mt_tap_pref LEFT_SHIFT T         &kp D                                                 &kp H  &mt_tap_pref RIGHT_SHIFT N  &mt_tap_pref RIGHT_GUI E  &mt_tap_pref LEFT_ALT I  &mt_tap_pref RIGHT_CONTROL O     &kp SQT
+  &kp ESC                        &kp Z                    &kp X                    &kp C                      &kp V         &kp B      &sk LSHFT  &none  &none  &sk ENTER         &kp K                       &kp M                 &kp COMMA                  &kp DOT                      &kp FSLH  &caps_word
+                                                      &kp GRAVE                                             &kp DEL  &l_paren_brk  &kp BACKSPACE  &sl 1  &sl 2  &kp SPACE  &r_paren_brk                   &kp MINUS                                         &sk RSHIFT
             >;
 
             sensor-bindings =
@@ -38,10 +74,10 @@
 
         numbers_edit_nav {
             bindings = <
-   &trans                &mt F1 0            &mt F2 0           &mt F3 0              &mt F4 0       &mt F5 0                                  &mt F6 0            &mt F7 0            &mt F8 0            &mt F9 0                    &mt F10 0  &trans
-&kp LG(X)  &mt LEFT_CONTROL LG(C)  &mt LEFT_ALT LG(V)  &mt LEFT_GUI LEFT  &mt LEFT_SHIFT RIGHT  &kp LA(LG(I))                                    &trans  &mt RIGHT_SHIFT UP  &mt RIGHT_GUI DOWN  &mt LEFT_ALT RG(Z)  &mt RIGHT_CONTROL RS(RG(Z))  &trans
-   &trans                  &trans              &trans             &trans                &trans         &trans  &trans  &trans  &trans  &trans    &trans              &trans              &trans              &trans                       &trans  &trans
-                                               &trans                                   &trans         &trans  &trans  &trans   &mo 3  &trans    &trans              &trans                                  &trans
+   &trans            &mt_tap_pref F1 KP_N1        &mt_tap_pref F2 KP_N2       &mt_tap_pref F3 KP_N3          &mt_tap_pref F4 KP_N4  &mt_tap_pref F5 KP_N5                                  &mt_tap_pref F6 KP_N6  &mt_tap_pref F7 KP_NUMBER_7        &mt_tap_pref F8 KP_N8        &mt_tap_pref F9 KP_N9                &mt_tap_pref F10 KP_N0  &trans
+&kp LG(X)  &mt_tap_pref LEFT_CONTROL LG(C)  &mt_tap_pref LEFT_ALT LG(V)  &mt_tap_pref LEFT_GUI LEFT  &mt_tap_pref LEFT_SHIFT RIGHT          &kp LA(LG(I))                                                 &trans  &mt_tap_pref RIGHT_SHIFT UP  &mt_tap_pref RIGHT_GUI DOWN  &mt_tap_pref LEFT_ALT RG(Z)  &mt_tap_pref RIGHT_CONTROL RS(RG(Z))  &trans
+   &trans                           &trans                       &trans                      &trans                         &trans                 &trans  &trans  &trans  &trans  &trans                 &trans                       &trans                       &trans                       &trans                                &trans  &trans
+                                                                 &trans                                                     &trans                 &trans  &trans  &trans   &mo 3  &trans                 &trans                       &trans                                                    &trans
             >;
         };
 
