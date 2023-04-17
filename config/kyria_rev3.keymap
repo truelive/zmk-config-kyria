@@ -23,17 +23,16 @@
                 <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <130>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
         };
         l_paren_brk: l_paren_brk {
             compatible = "zmk,behavior-tap-dance";
             label = "L_PAREN_BRK";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
             bindings =
-                <&kp KP_LEFT_PARENTHESIS>,
+                <&kp LEFT_PARENTHESIS>,
                 <&kp LEFT_BRACKET>,
                 <&kp LEFT_BRACE>;
         };
@@ -42,11 +41,9 @@
             label = "R_PAREN_BRK";
             #binding-cells = <0>;
             bindings =
-                <&kp KP_RIGHT_PARENTHESIS>,
+                <&kp RIGHT_PARENTHESIS>,
                 <&kp RIGHT_BRACKET>,
                 <&kp RIGHT_BRACE>;
-
-            tapping-term-ms = <180>;
         };
     };
 
@@ -61,10 +58,10 @@
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 
             bindings = <
-&kp EQUAL                        &kp Q                    &kp W                    &kp F                      &kp P         &kp G                                                 &kp J                       &kp L                     &kp U                    &kp Y                      &kp SEMI    &kp BSLH
-  &kp TAB  &mt_tap_pref LEFT_CONTROL A  &mt_tap_pref LEFT_ALT R  &mt_tap_pref LEFT_GUI S  &mt_tap_pref LEFT_SHIFT T         &kp D                                                 &kp H  &mt_tap_pref RIGHT_SHIFT N  &mt_tap_pref RIGHT_GUI E  &mt_tap_pref LEFT_ALT I  &mt_tap_pref RIGHT_CONTROL O     &kp SQT
-  &kp ESC                        &kp Z                    &kp X                    &kp C                      &kp V         &kp B      &sk LSHFT  &none  &none  &sk ENTER         &kp K                       &kp M                 &kp COMMA                  &kp DOT                      &kp FSLH  &caps_word
-                                                      &kp GRAVE                                             &kp DEL  &l_paren_brk  &kp BACKSPACE  &sl 1  &sl 2  &kp SPACE  &r_paren_brk                   &kp MINUS                                         &sk RSHIFT
+&kp EQUAL                        &kp Q                    &kp W                    &kp F                      &kp P    &kp G                                              &kp J                       &kp L                     &kp U                    &kp Y                      &kp SEMI    &kp BSLH
+  &kp TAB  &mt_tap_pref LEFT_CONTROL A  &mt_tap_pref LEFT_ALT R  &mt_tap_pref LEFT_GUI S  &mt_tap_pref LEFT_SHIFT T    &kp D                                              &kp H  &mt_tap_pref RIGHT_SHIFT N  &mt_tap_pref RIGHT_GUI E  &mt_tap_pref LEFT_ALT I  &mt_tap_pref RIGHT_CONTROL O     &kp SQT
+  &kp ESC                        &kp Z                    &kp X                    &kp C                      &kp V    &kp B      &sk LSHFT  &none  &none  &kp MINUS      &kp K                       &kp M                 &kp COMMA                  &kp DOT                      &kp FSLH  &caps_word
+                                                      &kp GRAVE                                        &l_paren_brk  &kp DEL  &kp BACKSPACE  &sl 1  &sl 2  &kp SPACE  &kp ENTER                &r_paren_brk                                    &sk RIGHT_SHIFT
             >;
 
             sensor-bindings =
