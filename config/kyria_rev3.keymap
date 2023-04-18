@@ -69,6 +69,8 @@
             sensor-bindings =
                 <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>,
                 <&inc_dec_kp UP_ARROW DOWN_ARROW>;
+
+            label = "0. Base";
         };
 
         numbers_edit_nav {
@@ -78,6 +80,8 @@
    &trans                           &trans                       &trans                      &trans                         &trans                 &trans  &trans  &trans  &trans  &trans                 &trans                       &trans                       &trans                       &trans                                &trans  &trans
                                                                  &trans                                                     &trans                 &trans  &trans  &trans   &mo 3  &trans                 &trans                       &trans                                                    &trans
             >;
+
+            label = "1. Num";
         };
 
         symbols {
@@ -87,6 +91,8 @@
 &trans  &kp PIPE     &kp UNDER      &kp PLUS  &kp LS(LEFT_BRACE)  &kp LS(RIGHT_BRACE)  &trans  &trans  &trans  &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE    &trans  &trans
                         &trans                            &trans               &trans  &trans   &mo 3  &trans  &trans      &trans        &trans                             &trans
             >;
+
+            label = "2. Sym";
         };
 
         adjust {
@@ -96,6 +102,8 @@
        &sys_reset                &trans        &trans  &out OUT_BLE  &out OUT_USB        &trans  &trans  &trans  &trans  &trans           &trans  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC      &kp C_SLEEP     &kp C_AL_LOCK       &sys_reset
                                                &trans                      &trans        &trans  &trans  &trans  &trans  &trans           &trans                &trans                                 &trans
             >;
+
+            label = "3. Adj";
         };
     };
 };
