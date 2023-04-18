@@ -6,8 +6,8 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/bt.h>
 
 &led_strip {
     chain-length = <31>;// Uncomment if using both per-key and underglow LEDs
@@ -58,10 +58,10 @@
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 
             bindings = <
-&kp EQUAL                        &kp Q                    &kp W                    &kp F                      &kp P    &kp G                                              &kp J                       &kp L                     &kp U                    &kp Y                      &kp SEMI    &kp BSLH
-  &kp TAB  &mt_tap_pref LEFT_CONTROL A  &mt_tap_pref LEFT_ALT R  &mt_tap_pref LEFT_GUI S  &mt_tap_pref LEFT_SHIFT T    &kp D                                              &kp H  &mt_tap_pref RIGHT_SHIFT N  &mt_tap_pref RIGHT_GUI E  &mt_tap_pref LEFT_ALT I  &mt_tap_pref RIGHT_CONTROL O     &kp SQT
-  &kp ESC                        &kp Z                    &kp X                    &kp C                      &kp V    &kp B      &sk LSHFT  &none  &none  &kp MINUS      &kp K                       &kp M                 &kp COMMA                  &kp DOT                      &kp FSLH  &caps_word
-                                                      &kp GRAVE                                        &l_paren_brk  &kp DEL  &kp BACKSPACE  &sl 1  &sl 2  &kp SPACE  &kp ENTER                &r_paren_brk                                    &sk RIGHT_SHIFT
+&kp EQUAL                        &kp Q                    &kp W                    &kp F                      &kp P    &kp G                                                                  &kp J                       &kp L                     &kp U                    &kp Y                      &kp SEMI    &kp BSLH
+  &kp TAB  &mt_tap_pref LEFT_CONTROL A  &mt_tap_pref LEFT_ALT R  &mt_tap_pref LEFT_GUI S  &mt_tap_pref LEFT_SHIFT T    &kp D                                                                  &kp H  &mt_tap_pref RIGHT_SHIFT N  &mt_tap_pref RIGHT_GUI E  &mt_tap_pref LEFT_ALT I  &mt_tap_pref RIGHT_CONTROL O     &kp SQT
+  &kp ESC                        &kp Z                    &kp X                    &kp C                      &kp V    &kp B      &sk LSHFT  &rgb_ug RGB_TOG  &rgb_ug RGB_TOG  &kp MINUS      &kp K                       &kp M                 &kp COMMA                  &kp DOT                      &kp FSLH  &caps_word
+                                                      &kp GRAVE                                        &l_paren_brk  &kp DEL  &kp BACKSPACE            &sl 1            &sl 2  &kp SPACE  &kp ENTER                &r_paren_brk                                    &sk RIGHT_SHIFT
             >;
 
             sensor-bindings =
