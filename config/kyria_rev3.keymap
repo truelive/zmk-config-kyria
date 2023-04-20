@@ -59,7 +59,7 @@
    &kp ESC           &kp Q           &kp W        &kp E           &kp R      &kp T                                                            &kp Y        &kp U        &kp I         &kp O               &kp P   &kp BSLH
    &kp TAB  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D     &mt LSHFT F      &kp G                                                            &kp H  &mt RSHFT J  &mt RCTRL K    &mt RALT L  &mt RIGHT_GUI SEMI    &kp SQT
 &kp LSHIFT           &kp Z           &kp X        &kp C           &kp V      &kp B        &kp LC(A)  &kp LC(C)    &kp LC(V)    &kp LC(X)      &kp N        &kp M    &kp COMMA       &kp DOT            &kp FSLH  &kp LCTRL
-                                     &none               &lt 7 LEFT_WIN  &lt 6 DEL  &lt 5 BACKSPACE  &lt 4 ESC  &lt 1 ENTER  &lt 2 SPACE  &lt 3 TAB     &kp LALT               &kp LEFT_ALT
+                                     &none               &lt 7 LEFT_WIN  &lt 6 DEL  &lt 5 BACKSPACE  &lt 2 ESC  &lt 1 ENTER  &lt 2 SPACE  &lt 4 TAB     &kp LALT               &kp LEFT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -76,10 +76,10 @@
 
         numbers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
+&none     &none     &none      &none      &none  &none                                         &kp LEFT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT_BRACKET  &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none                                                 &kp SEMI  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6          &kp EQUAL  &none
+&none     &none     &none      &none      &none  &none  &none  &none      &none         &none         &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp BACKSLASH  &none
+                    &none                 &none  &none  &none  &none  &kp MINUS  &kp NUMBER_0         &kp COMMA    &kp PERIOD                       &none
             >;
         };
 
