@@ -67,10 +67,10 @@
 
         symbols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
+&none  &kp LEFT_BRACE    &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE                              &none      &none      &none     &none     &none  &none
+&none       &kp COLON       &kp DOLLAR   &kp PERCENT             &kp CARET         &kp PLUS                              &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none       &kp TILDE  &kp EXCLAMATION        &kp AT              &kp HASH         &kp PIPE  &none  &none  &none  &none  &none      &none      &none     &none     &none  &none
+                                 &none                               &none            &none  &none  &none  &none  &none  &none      &none                &none
             >;
         };
 
