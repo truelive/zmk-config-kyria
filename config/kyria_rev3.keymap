@@ -63,7 +63,7 @@
                                      &none               &lt 7 LEFT_WIN  &lt 6 DEL  &lt 5 BACKSPACE  &lt 2 ESC  &lt 1 ENTER  &lt 3 SPACE  &lt 4 TAB     &kp LALT               &kp LS(LEFT_ALT)
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         symbols {
