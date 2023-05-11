@@ -105,7 +105,7 @@
         navigation {
             bindings = <
 &trans        &trans    &trans     &trans      &trans  &trans                                                &kp K_REDO     &kp K_PASTE    &kp K_COPY  &kp K_CUT  &kp K_UNDO  &trans
-&trans  &kp LEFT_GUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans                                            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp UP    &kp CAPS  &trans
+&trans  &kp LEFT_GUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans                                            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT    &kp CAPS  &trans
 &trans        &trans    &trans     &trans      &trans  &trans  &trans  &trans     &trans         &trans        &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP    &kp END     &kp INS  &trans
                         &trans                 &trans  &trans  &trans  &trans  &kp ENTER  &kp BACKSPACE      &kp DELETE          &trans                   &trans
             >;
